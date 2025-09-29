@@ -1,10 +1,13 @@
 // StringCodeTest
 // Some test code is provided for the early HW1 problems,
 // and much is left for you to add.
+package main.java;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 public class StringCodeTest {
 
@@ -83,6 +86,12 @@ public class StringCodeTest {
 		assertEquals(3, StringCode.maxRun("1112233"));
 	}
 
-	// Need test cases for stringIntersect
+	@Test
+	public void testStringIntersect() {
+    assertTrue(StringCode.stringIntersect("aab", "bab", 2));
+    assertTrue(StringCode.stringIntersect("aaa", "bab", 1));
+    assertFalse(StringCode.stringIntersect("aaa", "bbb", 1));
+    assertTrue(StringCode.stringIntersect("abcabcabc", "aaaabcccc", 3));
+	}
 	
 }
